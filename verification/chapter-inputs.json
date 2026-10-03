@@ -1,0 +1,52 @@
+[
+  {
+    "chapter": 1,
+    "path": "chapter01.md",
+    "sha256": "a9db588102669bef9accb3e3ee459f912df51d54a3339027ca06e0f48a0dcc47"
+  },
+  {
+    "chapter": 2,
+    "path": "chapter02.md",
+    "sha256": "0ffd9f0162e8492e876fb11bc674fcf86940ab4194f1f9cf24fa29fbf2e80dbc"
+  },
+  {
+    "chapter": 3,
+    "path": "chapter03.md",
+    "sha256": "b40b7c37a669e08be837079140b855f865dfbf0da6edc2a4cbef850bd7c28687"
+  },
+  {
+    "chapter": 4,
+    "path": "chapter04.md",
+    "sha256": "62c2a6d15c2f0704baf623a6e84165af1fb20bf30922c004d17bdf9492dcb50e"
+  },
+  {
+    "chapter": 5,
+    "path": "chapter05.md",
+    "sha256": "bc4eff1600d089761dacff57fa15219d6c967f568251daa0c11cf6f466f92df1"
+  },
+  {
+    "chapter": 6,
+    "path": "chapter06.md",
+    "sha256": "cb2dd450d1fa201f28a56eec9242868329c6197960270a01943a5759e3a0246a"
+  },
+  {
+    "chapter": 7,
+    "path": "chapter07.md",
+    "sha256": "4cf9e25a2f002b717ad56c321e7ec99d945d57174abd895a317bf1e344cfff38"
+  },
+  {
+    "chapter": 8,
+    "path": "chapter08.md",
+    "sha256": "9c722eb545c3a8cd1c98318f9c3e76c2594259315787ab0dd689387ef1b8ee76"
+  },
+  {
+    "chapter": 9,
+    "path": "chapter09.md",
+    "sha256": "e0bf2be225e765d29bb15099e1e75bb277e0d9cf59f63423e93c81361122bf72"
+  },
+  {
+    "chapter": 10,
+    "path": "chapter10.md",
+    "sha256": "526f6d9a0dd050922c531620449a62d1406dabe743b7b1331a9d599e68aa5e6a"
+  }
+]

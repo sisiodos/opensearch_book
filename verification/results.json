@@ -1,0 +1,1734 @@
+{
+  "prefix": "lbv-7e280f3b-",
+  "environment": {
+    "name": "20728973b851",
+    "cluster_name": "docker-cluster",
+    "cluster_uuid": "cnfAkWCnRSauv6tH8-rHgg",
+    "version": {
+      "distribution": "opensearch",
+      "number": "3.9.0",
+      "build_type": "tar",
+      "build_hash": "4ee42a94e87f66fbf1e62a9871b1b87f91e02472",
+      "build_date": "2026-09-23T01:00:48.264305421Z",
+      "build_snapshot": false,
+      "lucene_version": "10.5.1",
+      "minimum_wire_compatibility_version": "2.19.0",
+      "minimum_index_compatibility_version": "2.0.0"
+    },
+    "tagline": "The OpenSearch Project: https://opensearch.org/"
+  },
+  "results": [
+    {
+      "chapter": 1,
+      "section": "1.1",
+      "name": "same _id replaces one document",
+      "status": "PASS",
+      "evidence": {
+        "documents": 2,
+        "id": "a"
+      },
+      "exchanges": [
+        4,
+        7
+      ],
+      "seconds": 0.023
+    },
+    {
+      "chapter": 1,
+      "section": "1.2–1.3",
+      "name": "filter then aggregation/sort and source retrieval",
+      "status": "PASS",
+      "evidence": {
+        "avg": 100
+      },
+      "exchanges": [
+        7,
+        8
+      ],
+      "seconds": 0.005
+    },
+    {
+      "chapter": 2,
+      "section": "2.1.1 / 2.1.4",
+      "name": "term is raw; match analyzes text",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        8,
+        12
+      ],
+      "seconds": 0.015
+    },
+    {
+      "chapter": 2,
+      "section": "2.1.5",
+      "name": "boolean and keyword array containment",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        12,
+        14
+      ],
+      "seconds": 0.01
+    },
+    {
+      "chapter": 2,
+      "section": "2.2.1 / 2.2.5",
+      "name": "numeric and parsed date range",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        14,
+        16
+      ],
+      "seconds": 0.008
+    },
+    {
+      "chapter": 2,
+      "section": "2.2.5",
+      "name": "date_nanos retains fractional precision",
+      "status": "PASS",
+      "evidence": {
+        "time": [
+          "2024-05-01T00:00:00.123456789Z"
+        ]
+      },
+      "exchanges": [
+        16,
+        19
+      ],
+      "seconds": 0.066
+    },
+    {
+      "chapter": 2,
+      "section": "2.3.4",
+      "name": "DocValues-only range, aggregate and sort",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        19,
+        23
+      ],
+      "seconds": 0.075
+    },
+    {
+      "chapter": 2,
+      "section": "2.3.4",
+      "name": "skip_list mapping and range",
+      "status": "PASS",
+      "evidence": {
+        "lbv-7e280f3b-skip": {
+          "mappings": {
+            "properties": {
+              "v": {
+                "type": "long",
+                "index": false,
+                "skip_list": true
+              }
+            }
+          }
+        }
+      },
+      "exchanges": [
+        23,
+        27
+      ],
+      "seconds": 0.068
+    },
+    {
+      "chapter": 2,
+      "section": "2.3.3",
+      "name": "derived source reconstructs keyword array",
+      "status": "PASS",
+      "evidence": {
+        "input": [
+          "z",
+          "a",
+          "a"
+        ],
+        "reconstructed": {
+          "tags": [
+            "a",
+            "z"
+          ]
+        }
+      },
+      "exchanges": [
+        27,
+        30
+      ],
+      "seconds": 0.08
+    },
+    {
+      "chapter": 3,
+      "section": "3.2–3.3",
+      "name": "field capabilities by type",
+      "status": "PASS",
+      "evidence": {
+        "indices": [
+          "lbv-7e280f3b-basic"
+        ],
+        "fields": {
+          "date": {
+            "date": {
+              "type": "date",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_routing": {
+            "_routing": {
+              "type": "_routing",
+              "searchable": true,
+              "aggregatable": false
+            }
+          },
+          "_doc_count": {
+            "long": {
+              "type": "long",
+              "searchable": false,
+              "aggregatable": false
+            }
+          },
+          "code": {
+            "keyword": {
+              "type": "keyword",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "flag": {
+            "boolean": {
+              "type": "boolean",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_index": {
+            "_index": {
+              "type": "_index",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_feature": {
+            "_feature": {
+              "type": "_feature",
+              "searchable": false,
+              "aggregatable": false
+            }
+          },
+          "display": {
+            "keyword": {
+              "type": "keyword",
+              "searchable": false,
+              "aggregatable": false
+            }
+          },
+          "tags": {
+            "keyword": {
+              "type": "keyword",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_ignored": {
+            "_ignored": {
+              "type": "_ignored",
+              "searchable": true,
+              "aggregatable": false
+            }
+          },
+          "_seq_no": {
+            "_seq_no": {
+              "type": "_seq_no",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_nested_path": {
+            "_nested_path": {
+              "type": "_nested_path",
+              "searchable": true,
+              "aggregatable": false
+            }
+          },
+          "_field_names": {
+            "_field_names": {
+              "type": "_field_names",
+              "searchable": true,
+              "aggregatable": false
+            }
+          },
+          "_data_stream_timestamp": {
+            "_data_stream_timestamp": {
+              "type": "_data_stream_timestamp",
+              "searchable": false,
+              "aggregatable": false
+            }
+          },
+          "price": {
+            "integer": {
+              "type": "integer",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "name": {
+            "text": {
+              "type": "text",
+              "searchable": true,
+              "aggregatable": false
+            }
+          },
+          "location": {
+            "geo_point": {
+              "type": "geo_point",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_source": {
+            "_source": {
+              "type": "_source",
+              "searchable": false,
+              "aggregatable": false
+            }
+          },
+          "_id": {
+            "_id": {
+              "type": "_id",
+              "searchable": true,
+              "aggregatable": true
+            }
+          },
+          "_version": {
+            "_version": {
+              "type": "_version",
+              "searchable": false,
+              "aggregatable": false
+            }
+          }
+        }
+      },
+      "exchanges": [
+        30,
+        31
+      ],
+      "seconds": 0.003
+    },
+    {
+      "chapter": 3,
+      "section": "3.2",
+      "name": "assert default field capabilities for all table types",
+      "status": "PASS",
+      "evidence": {
+        "t": {
+          "text": {
+            "type": "text",
+            "searchable": true,
+            "aggregatable": false
+          }
+        },
+        "k": {
+          "keyword": {
+            "type": "keyword",
+            "searchable": true,
+            "aggregatable": true
+          }
+        },
+        "n": {
+          "long": {
+            "type": "long",
+            "searchable": true,
+            "aggregatable": true
+          }
+        },
+        "b": {
+          "boolean": {
+            "type": "boolean",
+            "searchable": true,
+            "aggregatable": true
+          }
+        },
+        "d": {
+          "date": {
+            "type": "date",
+            "searchable": true,
+            "aggregatable": true
+          }
+        },
+        "g": {
+          "geo_point": {
+            "type": "geo_point",
+            "searchable": true,
+            "aggregatable": true
+          }
+        }
+      },
+      "exchanges": [
+        31,
+        33
+      ],
+      "seconds": 0.053
+    },
+    {
+      "chapter": 3,
+      "section": "3.2 / 3.3",
+      "name": "geo_point sorting and aggregation",
+      "status": "PASS",
+      "evidence": {
+        "bounds": {
+          "bounds": {
+            "top_left": {
+              "lat": 35.69999998435378,
+              "lon": 139.72999999299645
+            },
+            "bottom_right": {
+              "lat": 35.68123596254736,
+              "lon": 139.76712495088577
+            }
+          }
+        }
+      },
+      "exchanges": [
+        33,
+        34
+      ],
+      "seconds": 0.004
+    },
+    {
+      "chapter": 3,
+      "section": "3.2 / 3.4",
+      "name": "text accepts but ignores doc_values true and false",
+      "status": "PASS",
+      "evidence": [
+        {
+          "input_doc_values": true,
+          "mapping": {
+            "type": "text"
+          },
+          "caps": {
+            "type": "text",
+            "searchable": true,
+            "aggregatable": false
+          },
+          "aggregation_error": {
+            "root_cause": [
+              {
+                "type": "illegal_argument_exception",
+                "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+              }
+            ],
+            "type": "search_phase_execution_exception",
+            "reason": "all shards failed",
+            "phase": "query",
+            "grouped": true,
+            "failed_shards": [
+              {
+                "shard": 0,
+                "index": "lbv-7e280f3b-textdvtrue",
+                "node": "p_F7jBWOQHKoSIT3TrF0ig",
+                "reason": {
+                  "type": "illegal_argument_exception",
+                  "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+                }
+              }
+            ],
+            "caused_by": {
+              "type": "illegal_argument_exception",
+              "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory.",
+              "caused_by": {
+                "type": "illegal_argument_exception",
+                "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+              }
+            }
+          }
+        },
+        {
+          "input_doc_values": false,
+          "mapping": {
+            "type": "text"
+          },
+          "caps": {
+            "type": "text",
+            "searchable": true,
+            "aggregatable": false
+          },
+          "aggregation_error": {
+            "root_cause": [
+              {
+                "type": "illegal_argument_exception",
+                "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+              }
+            ],
+            "type": "search_phase_execution_exception",
+            "reason": "all shards failed",
+            "phase": "query",
+            "grouped": true,
+            "failed_shards": [
+              {
+                "shard": 0,
+                "index": "lbv-7e280f3b-textdvfalse",
+                "node": "p_F7jBWOQHKoSIT3TrF0ig",
+                "reason": {
+                  "type": "illegal_argument_exception",
+                  "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+                }
+              }
+            ],
+            "caused_by": {
+              "type": "illegal_argument_exception",
+              "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory.",
+              "caused_by": {
+                "type": "illegal_argument_exception",
+                "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [t] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+              }
+            }
+          }
+        }
+      ],
+      "exchanges": [
+        34,
+        44
+      ],
+      "seconds": 0.162
+    },
+    {
+      "chapter": 3,
+      "section": "3.4",
+      "name": "text aggregation fails without fielddata",
+      "status": "PASS",
+      "evidence": {
+        "root_cause": [
+          {
+            "type": "illegal_argument_exception",
+            "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+          }
+        ],
+        "type": "search_phase_execution_exception",
+        "reason": "all shards failed",
+        "phase": "query",
+        "grouped": true,
+        "failed_shards": [
+          {
+            "shard": 0,
+            "index": "lbv-7e280f3b-basic",
+            "node": "p_F7jBWOQHKoSIT3TrF0ig",
+            "reason": {
+              "type": "illegal_argument_exception",
+              "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+            }
+          }
+        ],
+        "caused_by": {
+          "type": "illegal_argument_exception",
+          "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory.",
+          "caused_by": {
+            "type": "illegal_argument_exception",
+            "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+          }
+        }
+      },
+      "exchanges": [
+        44,
+        45
+      ],
+      "seconds": 0.003
+    },
+    {
+      "chapter": 3,
+      "section": "3.4",
+      "name": "keyword lexicographic range differs from numeric",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        45,
+        50
+      ],
+      "seconds": 0.081
+    },
+    {
+      "chapter": 3,
+      "section": "3.4–3.5",
+      "name": "index/doc_values four combinations",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        50,
+        58
+      ],
+      "seconds": 0.078
+    },
+    {
+      "chapter": 3,
+      "section": "3.3 / 3.5",
+      "name": "enabled false retains arbitrary object",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        58,
+        62
+      ],
+      "seconds": 0.061
+    },
+    {
+      "chapter": 3,
+      "section": "3.5",
+      "name": "index false still validates numeric input",
+      "status": "PASS",
+      "evidence": {
+        "root_cause": [
+          {
+            "type": "mapper_parsing_exception",
+            "reason": "failed to parse field [v] of type [integer] in document with id 'a'. Preview of field's value: 'not-a-number'"
+          }
+        ],
+        "type": "mapper_parsing_exception",
+        "reason": "failed to parse field [v] of type [integer] in document with id 'a'. Preview of field's value: 'not-a-number'",
+        "caused_by": {
+          "type": "number_format_exception",
+          "reason": "For input string: \"not-a-number\""
+        }
+      },
+      "exchanges": [
+        62,
+        64
+      ],
+      "seconds": 0.05
+    },
+    {
+      "chapter": 3,
+      "section": "3.6",
+      "name": "source filtering and facets in one request",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        64,
+        65
+      ],
+      "seconds": 0.006
+    },
+    {
+      "chapter": 4,
+      "section": "4.2 / 4.3",
+      "name": "SKU collapse changes hits but not aggregation grain",
+      "status": "PASS",
+      "evidence": {
+        "collapsed_hits": 2,
+        "total": 3,
+        "aggregation_docs": 3
+      },
+      "exchanges": [
+        65,
+        70
+      ],
+      "seconds": 0.088
+    },
+    {
+      "chapter": 4,
+      "section": "4.3",
+      "name": "product and SKU indexes from same source",
+      "status": "PASS",
+      "evidence": {
+        "products": 1,
+        "skus": 2
+      },
+      "exchanges": [
+        70,
+        77
+      ],
+      "seconds": 0.141
+    },
+    {
+      "chapter": 4,
+      "section": "4.5",
+      "name": "history document count differs from people count",
+      "status": "PASS",
+      "evidence": {
+        "histories": 3,
+        "people": 2
+      },
+      "exchanges": [
+        77,
+        82
+      ],
+      "seconds": 0.076
+    },
+    {
+      "chapter": 5,
+      "section": "5.2–5.7",
+      "name": "book exact/prefix/match/phrase/range/terms/AND/sort examples",
+      "status": "PASS",
+      "evidence": [
+        {
+          "query": {
+            "term": {
+              "product_id": "ABC123"
+            }
+          },
+          "ids": [
+            "ABC123"
+          ]
+        },
+        {
+          "query": {
+            "prefix": {
+              "product_name.keyword": "ワイヤレス"
+            }
+          },
+          "ids": [
+            "ABC123",
+            "C"
+          ]
+        },
+        {
+          "query": {
+            "match": {
+              "product_name": "ワイヤレスイヤホン"
+            }
+          },
+          "ids": [
+            "ABC123",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "query": {
+            "range": {
+              "price": {
+                "gte": 1000,
+                "lte": 5000
+              }
+            }
+          },
+          "ids": [
+            "ABC123"
+          ]
+        },
+        {
+          "query": {
+            "range": {
+              "created_at": {
+                "gte": "2024-12-01",
+                "lte": "2025-01-15"
+              }
+            }
+          },
+          "ids": [
+            "ABC123",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "query": {
+            "range": {
+              "created_at": {
+                "gte": "01/12/2024",
+                "lte": "15/01/2025",
+                "format": "dd/MM/yyyy"
+              }
+            }
+          },
+          "ids": [
+            "ABC123",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "query": {
+            "terms": {
+              "category_code": [
+                "ELEC",
+                "AUDIO",
+                "WEAR"
+              ]
+            }
+          },
+          "ids": [
+            "ABC123",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "match": {
+                    "product_name": "ワイヤレス"
+                  }
+                },
+                {
+                  "match": {
+                    "product_name": "イヤホン"
+                  }
+                }
+              ]
+            }
+          },
+          "ids": [
+            "ABC123"
+          ]
+        },
+        {
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "terms": {
+                    "categories": [
+                      "アウトドア"
+                    ]
+                  }
+                },
+                {
+                  "terms": {
+                    "categories": [
+                      "防水"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "ids": [
+            "ABC123"
+          ]
+        }
+      ],
+      "exchanges": [
+        82,
+        103
+      ],
+      "seconds": 0.149
+    },
+    {
+      "chapter": 5,
+      "section": "5.4",
+      "name": "rolling 30 days excludes future dates",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        103,
+        108
+      ],
+      "seconds": 0.082
+    },
+    {
+      "chapter": 5,
+      "section": "5.4",
+      "name": "query format accepts dd/MM/yyyy",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        108,
+        111
+      ],
+      "seconds": 0.064
+    },
+    {
+      "chapter": 5,
+      "section": "5.4",
+      "name": "date format does not preserve nanosecond precision",
+      "status": "PASS",
+      "evidence": "2024-05-01T00:00:00.123Z",
+      "exchanges": [
+        111,
+        114
+      ],
+      "seconds": 0.068
+    },
+    {
+      "chapter": 5,
+      "section": "5.8",
+      "name": "exists/null/empty/ignore_above behavior",
+      "status": "PASS",
+      "evidence": {
+        "source_null_not_same_as_not_exists": true
+      },
+      "exchanges": [
+        114,
+        124
+      ],
+      "seconds": 0.128
+    },
+    {
+      "chapter": 5,
+      "section": "5.8",
+      "name": "null_value distinguishes explicit null from missing",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        124,
+        132
+      ],
+      "seconds": 0.127
+    },
+    {
+      "chapter": 5,
+      "section": "5.9",
+      "name": "log1p multiply yields zero for zero/missing count",
+      "status": "PASS",
+      "evidence": {
+        "nine": 0.06069608,
+        "zero": 0.0,
+        "missing": 0.0
+      },
+      "exchanges": [
+        132,
+        137
+      ],
+      "seconds": 0.076
+    },
+    {
+      "chapter": 5,
+      "section": "5.9",
+      "name": "script_score replaces lexical score",
+      "status": "PASS",
+      "evidence": {
+        "actual": 6.3978953,
+        "formula": 6.397895272798371
+      },
+      "exchanges": [
+        137,
+        140
+      ],
+      "seconds": 0.056
+    },
+    {
+      "chapter": 5,
+      "section": "5.10",
+      "name": "exists inventory vs quantity > 0",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        140,
+        147
+      ],
+      "seconds": 0.09
+    },
+    {
+      "chapter": 5,
+      "section": "5.10",
+      "name": "filter does not add score",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        147,
+        152
+      ],
+      "seconds": 0.075
+    },
+    {
+      "chapter": 5,
+      "section": "5.10",
+      "name": "should optional only with must/filter by default",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        152,
+        157
+      ],
+      "seconds": 0.073
+    },
+    {
+      "chapter": 6,
+      "section": "6.1.1 / 6.2.2",
+      "name": "object false positive vs nested same-element match",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        157,
+        165
+      ],
+      "seconds": 0.135
+    },
+    {
+      "chapter": 6,
+      "section": "6.1.2",
+      "name": "dynamic keys grow mapping; repeated values do not",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        165,
+        171
+      ],
+      "seconds": 0.116
+    },
+    {
+      "chapter": 6,
+      "section": "6.1.3",
+      "name": "flat_object keeps keys out of mapping and exact lookup",
+      "status": "PASS",
+      "evidence": {
+        "mapping": {
+          "type": "flat_object"
+        },
+        "internal_aggregation_response": {
+          "took": 2,
+          "timed_out": false,
+          "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+          },
+          "hits": {
+            "total": {
+              "value": 2,
+              "relation": "eq"
+            },
+            "max_score": 1.0,
+            "hits": [
+              {
+                "_index": "lbv-7e280f3b-flat",
+                "_id": "a",
+                "_score": 1.0,
+                "_source": {
+                  "price": 100,
+                  "attributes": {
+                    "custom_001": "red",
+                    "n": "100"
+                  }
+                }
+              },
+              {
+                "_index": "lbv-7e280f3b-flat",
+                "_id": "b",
+                "_score": 1.0,
+                "_source": {
+                  "price": 20,
+                  "attributes": {
+                    "custom_002": "blue",
+                    "n": "20"
+                  }
+                }
+              }
+            ]
+          },
+          "aggregations": {
+            "a": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "red",
+                  "doc_count": 1
+                },
+                {
+                  "key": "java.lang.Object@6cce0b1f",
+                  "doc_count": 1
+                },
+                {
+                  "key": "java.lang.Object@6cce0b1f",
+                  "doc_count": 1
+                },
+                {
+                  "key": "java.lang.Object@6cce0b1f",
+                  "doc_count": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      "exchanges": [
+        171,
+        177
+      ],
+      "seconds": 0.123
+    },
+    {
+      "chapter": 6,
+      "section": "6.2.2",
+      "name": "separate nested queries can match different elements",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        177,
+        180
+      ],
+      "seconds": 0.063
+    },
+    {
+      "chapter": 6,
+      "section": "6.2.3",
+      "name": "application scalar pair key exact match",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        180,
+        184
+      ],
+      "seconds": 0.065
+    },
+    {
+      "chapter": 6,
+      "section": "6.2.5",
+      "name": "100 nested objects produce 101 Lucene documents",
+      "status": "PASS",
+      "evidence": {
+        "lucene_documents": 101,
+        "search_documents": 1
+      },
+      "exchanges": [
+        184,
+        189
+      ],
+      "seconds": 0.072
+    },
+    {
+      "chapter": 6,
+      "section": "6.2.5",
+      "name": "nested aggregation counts child scope",
+      "status": "PASS",
+      "evidence": {
+        "doc_count": 2,
+        "avg": {
+          "value": 1.5
+        }
+      },
+      "exchanges": [
+        189,
+        192
+      ],
+      "seconds": 0.063
+    },
+    {
+      "chapter": 6,
+      "section": "6.2.5",
+      "name": "depth/nested_fields/nested_objects limits reject excess",
+      "status": "PASS",
+      "evidence": [
+        {
+          "root_cause": [
+            {
+              "type": "illegal_argument_exception",
+              "reason": "Limit of mapping depth [1] has been exceeded due to object field [a]"
+            }
+          ],
+          "type": "illegal_argument_exception",
+          "reason": "Limit of mapping depth [1] has been exceeded due to object field [a]"
+        },
+        {
+          "root_cause": [
+            {
+              "type": "illegal_argument_exception",
+              "reason": "Limit of nested fields [1] has been exceeded"
+            }
+          ],
+          "type": "illegal_argument_exception",
+          "reason": "Limit of nested fields [1] has been exceeded"
+        },
+        {
+          "root_cause": [
+            {
+              "type": "mapper_parsing_exception",
+              "reason": "The number of nested documents has exceeded the allowed limit of [1]. This limit can be set by changing the [index.mapping.nested_objects.limit] index level setting."
+            }
+          ],
+          "type": "mapper_parsing_exception",
+          "reason": "The number of nested documents has exceeded the allowed limit of [1]. This limit can be set by changing the [index.mapping.nested_objects.limit] index level setting."
+        }
+      ],
+      "exchanges": [
+        192,
+        196
+      ],
+      "seconds": 0.065
+    },
+    {
+      "chapter": 7,
+      "section": "7.1–7.2",
+      "name": "standard analyzer vs tokenizer vs keyword",
+      "status": "PASS",
+      "evidence": {
+        "standard_analyzer": [
+          "opensearch",
+          "lucene"
+        ],
+        "standard_tokenizer": [
+          "OpenSearch",
+          "Lucene"
+        ],
+        "keyword": [
+          "OpenSearch Lucene"
+        ]
+      },
+      "exchanges": [
+        196,
+        199
+      ],
+      "seconds": 0.006
+    },
+    {
+      "chapter": 7,
+      "section": "7.1.3",
+      "name": "keyword rejects analyzer; normalizer retains one term",
+      "status": "PASS",
+      "evidence": {
+        "root_cause": [
+          {
+            "type": "mapper_parsing_exception",
+            "reason": "unknown parameter [analyzer] on mapper [k] of type [keyword]"
+          }
+        ],
+        "type": "mapper_parsing_exception",
+        "reason": "Failed to parse mapping [_doc]: unknown parameter [analyzer] on mapper [k] of type [keyword]",
+        "caused_by": {
+          "type": "mapper_parsing_exception",
+          "reason": "unknown parameter [analyzer] on mapper [k] of type [keyword]"
+        }
+      },
+      "exchanges": [
+        199,
+        203
+      ],
+      "seconds": 0.058
+    },
+    {
+      "chapter": 7,
+      "section": "7.1.3",
+      "name": "text with keyword analyzer remains text without aggregation",
+      "status": "PASS",
+      "evidence": {
+        "root_cause": [
+          {
+            "type": "illegal_argument_exception",
+            "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [v] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+          }
+        ],
+        "type": "search_phase_execution_exception",
+        "reason": "all shards failed",
+        "phase": "query",
+        "grouped": true,
+        "failed_shards": [
+          {
+            "shard": 0,
+            "index": "lbv-7e280f3b-textkeyword",
+            "node": "p_F7jBWOQHKoSIT3TrF0ig",
+            "reason": {
+              "type": "illegal_argument_exception",
+              "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [v] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+            }
+          }
+        ],
+        "caused_by": {
+          "type": "illegal_argument_exception",
+          "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [v] in order to load field data by uninverting the inverted index. Note that this can use significant memory.",
+          "caused_by": {
+            "type": "illegal_argument_exception",
+            "reason": "Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [v] in order to load field data by uninverting the inverted index. Note that this can use significant memory."
+          }
+        }
+      },
+      "exchanges": [
+        203,
+        207
+      ],
+      "seconds": 0.06
+    },
+    {
+      "chapter": 7,
+      "section": "7.2",
+      "name": "kuromoji tokenizer on Japanese example",
+      "status": "PASS",
+      "evidence": [
+        {
+          "token": "私",
+          "start_offset": 0,
+          "end_offset": 1,
+          "type": "word",
+          "position": 0
+        },
+        {
+          "token": "は",
+          "start_offset": 1,
+          "end_offset": 2,
+          "type": "word",
+          "position": 1
+        },
+        {
+          "token": "学生",
+          "start_offset": 2,
+          "end_offset": 4,
+          "type": "word",
+          "position": 2
+        },
+        {
+          "token": "です",
+          "start_offset": 4,
+          "end_offset": 6,
+          "type": "word",
+          "position": 3
+        }
+      ],
+      "exchanges": [
+        207,
+        208
+      ],
+      "seconds": 0.005
+    },
+    {
+      "chapter": 7,
+      "section": "7.3.3",
+      "name": "complete custom_ja book mapping and search synonyms",
+      "status": "PASS",
+      "evidence": {
+        "index_tokens": [
+          {
+            "token": "pc",
+            "start_offset": 0,
+            "end_offset": 2,
+            "type": "word",
+            "position": 0
+          }
+        ],
+        "search_tokens": [
+          {
+            "token": "パソコン",
+            "start_offset": 0,
+            "end_offset": 2,
+            "type": "SYNONYM",
+            "position": 0
+          },
+          {
+            "token": "コンピューター",
+            "start_offset": 0,
+            "end_offset": 2,
+            "type": "SYNONYM",
+            "position": 0
+          },
+          {
+            "token": "pc",
+            "start_offset": 0,
+            "end_offset": 2,
+            "type": "word",
+            "position": 0
+          }
+        ]
+      },
+      "exchanges": [
+        208,
+        214
+      ],
+      "seconds": 0.074
+    },
+    {
+      "chapter": 7,
+      "section": "7.4.3",
+      "name": "natural_search definition and explicit Japanese stopwords",
+      "status": "PASS",
+      "evidence": [
+        {
+          "token": "pc",
+          "start_offset": 0,
+          "end_offset": 4,
+          "type": "SYNONYM",
+          "position": 0
+        },
+        {
+          "token": "パソコン",
+          "start_offset": 0,
+          "end_offset": 4,
+          "type": "word",
+          "position": 0
+        },
+        {
+          "token": "安い",
+          "start_offset": 5,
+          "end_offset": 7,
+          "type": "word",
+          "position": 2
+        }
+      ],
+      "exchanges": [
+        214,
+        218
+      ],
+      "seconds": 0.057
+    },
+    {
+      "chapter": 7,
+      "section": "7.4.5",
+      "name": "faq_query multi-word synonym graph",
+      "status": "PASS",
+      "evidence": [
+        {
+          "token": "personal",
+          "start_offset": 0,
+          "end_offset": 2,
+          "type": "SYNONYM",
+          "position": 0
+        },
+        {
+          "token": "pc",
+          "start_offset": 0,
+          "end_offset": 2,
+          "type": "<ALPHANUM>",
+          "position": 0,
+          "positionLength": 2
+        },
+        {
+          "token": "computer",
+          "start_offset": 0,
+          "end_offset": 2,
+          "type": "SYNONYM",
+          "position": 1
+        }
+      ],
+      "exchanges": [
+        218,
+        223
+      ],
+      "seconds": 0.065
+    },
+    {
+      "chapter": 7,
+      "section": "7.4.1",
+      "name": "term/match/phrase/prefix/wildcard/regexp differences",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        223,
+        232
+      ],
+      "seconds": 0.096
+    },
+    {
+      "chapter": 8,
+      "section": "8.2",
+      "name": "three coordinate formats give same search results",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        232,
+        237
+      ],
+      "seconds": 0.082
+    },
+    {
+      "chapter": 8,
+      "section": "8.3",
+      "name": "book distance, box and polygon queries on points",
+      "status": "PASS",
+      "evidence": [
+        {
+          "query_type": "geo_distance",
+          "ids": [
+            "station"
+          ]
+        },
+        {
+          "query_type": "geo_bounding_box",
+          "ids": [
+            "station"
+          ]
+        },
+        {
+          "query_type": "geo_shape",
+          "ids": [
+            "west"
+          ]
+        }
+      ],
+      "exchanges": [
+        237,
+        244
+      ],
+      "seconds": 0.121
+    },
+    {
+      "chapter": 8,
+      "section": "8.4",
+      "name": "distance sort and gauss decay at scale",
+      "status": "PASS",
+      "evidence": {
+        "at_center": 1.0,
+        "approximately_1km": 0.5000003
+      },
+      "exchanges": [
+        244,
+        252
+      ],
+      "seconds": 0.183
+    },
+    {
+      "chapter": 8,
+      "section": "8.5",
+      "name": "point array and geo_shape line/polygon fields",
+      "status": "PASS",
+      "evidence": null,
+      "exchanges": [
+        252,
+        256
+      ],
+      "seconds": 0.06
+    },
+    {
+      "chapter": 9,
+      "section": "9.2.2",
+      "name": "BM25 explain agrees with book formula",
+      "status": "PASS",
+      "evidence": {
+        "actual": 0.30604887,
+        "book_formula": 0.30604887485768834,
+        "explanation": {
+          "value": 0.30604887,
+          "description": "weight(title:lucene in 0) [PerFieldSimilarity], result of:",
+          "details": [
+            {
+              "value": 0.30604887,
+              "description": "score(freq=2.0), computed as boost * idf * tf from:",
+              "details": [
+                {
+                  "value": 0.47000363,
+                  "description": "idf, computed as log(1 + (N - n + 0.5) / (n + 0.5)) from:",
+                  "details": [
+                    {
+                      "value": 2,
+                      "description": "n, number of documents containing term",
+                      "details": []
+                    },
+                    {
+                      "value": 3,
+                      "description": "N, total number of documents with field",
+                      "details": []
+                    }
+                  ]
+                },
+                {
+                  "value": 0.65116274,
+                  "description": "tf, computed as freq / (freq + k1 * (1 - b + b * dl / avgdl)) from:",
+                  "details": [
+                    {
+                      "value": 2.0,
+                      "description": "freq, occurrences of term within document",
+                      "details": []
+                    },
+                    {
+                      "value": 1.2,
+                      "description": "k1, term saturation parameter",
+                      "details": []
+                    },
+                    {
+                      "value": 0.75,
+                      "description": "b, length normalization parameter",
+                      "details": []
+                    },
+                    {
+                      "value": 2.0,
+                      "description": "dl, length of field",
+                      "details": []
+                    },
+                    {
+                      "value": 2.3333333,
+                      "description": "avgdl, average length of field",
+                      "details": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "exchanges": [
+        256,
+        261
+      ],
+      "seconds": 0.068
+    },
+    {
+      "chapter": 9,
+      "section": "9.2.2",
+      "name": "LegacyBM25 scaling versus current BM25",
+      "status": "PASS",
+      "evidence": {
+        "ratios": {
+          "a": 2.200000084953753,
+          "b": 2.200000302429294
+        }
+      },
+      "exchanges": [
+        261,
+        271
+      ],
+      "seconds": 0.145
+    },
+    {
+      "chapter": 9,
+      "section": "9.3.2",
+      "name": "title boost raises title match",
+      "status": "PASS",
+      "evidence": {
+        "title": 0.9452007,
+        "body": 0.31506687
+      },
+      "exchanges": [
+        271,
+        275
+      ],
+      "seconds": 0.065
+    },
+    {
+      "chapter": 9,
+      "section": "9.3.3",
+      "name": "sqrt(factor * popularity) multiply formula",
+      "status": "PASS",
+      "evidence": {
+        "actual": 1.6852111,
+        "expected": 1.6852109759438132
+      },
+      "exchanges": [
+        275,
+        282
+      ],
+      "seconds": 0.087
+    },
+    {
+      "chapter": 9,
+      "section": "9.3.4",
+      "name": "custom BM25 k1/b settings change score",
+      "status": "PASS",
+      "evidence": {
+        "default": 0.30604887,
+        "custom": 0.23500182
+      },
+      "exchanges": [
+        282,
+        292
+      ],
+      "seconds": 0.148
+    },
+    {
+      "chapter": 10,
+      "section": "10.1 / 10.4",
+      "name": "refresh visibility and segment/flush APIs",
+      "status": "PASS",
+      "evidence": {
+        "_shards": {
+          "total": 1,
+          "successful": 1,
+          "failed": 0
+        },
+        "indices": {
+          "lbv-7e280f3b-refresh": {
+            "shards": {
+              "0": [
+                {
+                  "routing": {
+                    "state": "STARTED",
+                    "primary": true,
+                    "node": "p_F7jBWOQHKoSIT3TrF0ig"
+                  },
+                  "num_committed_segments": 1,
+                  "num_search_segments": 1,
+                  "segments": {
+                    "_0": {
+                      "generation": 0,
+                      "num_docs": 1,
+                      "deleted_docs": 0,
+                      "size_in_bytes": 3909,
+                      "memory_in_bytes": 0,
+                      "committed": true,
+                      "search": true,
+                      "version": "10.5.1",
+                      "compound": true,
+                      "attributes": {
+                        "Lucene90StoredFieldsFormat.mode": "BEST_SPEED"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "exchanges": [
+        292,
+        300
+      ],
+      "seconds": 0.072
+    },
+    {
+      "chapter": 10,
+      "section": "10.3",
+      "name": "replica setting and write alias switching",
+      "status": "PASS",
+      "evidence": {
+        "single_node_with_one_replica": "yellow",
+        "alias_switch": "pass"
+      },
+      "exchanges": [
+        300,
+        311
+      ],
+      "seconds": 0.197
+    }
+  ],
+  "indexes": [
+    "lbv-7e280f3b-basic",
+    "lbv-7e280f3b-nanos",
+    "lbv-7e280f3b-dvonly",
+    "lbv-7e280f3b-skip",
+    "lbv-7e280f3b-derived",
+    "lbv-7e280f3b-defaults",
+    "lbv-7e280f3b-textdvtrue",
+    "lbv-7e280f3b-textdvfalse",
+    "lbv-7e280f3b-lex",
+    "lbv-7e280f3b-combos",
+    "lbv-7e280f3b-disabled",
+    "lbv-7e280f3b-validate",
+    "lbv-7e280f3b-collapse",
+    "lbv-7e280f3b-productmodel",
+    "lbv-7e280f3b-skumodel",
+    "lbv-7e280f3b-history",
+    "lbv-7e280f3b-products",
+    "lbv-7e280f3b-rolling",
+    "lbv-7e280f3b-format",
+    "lbv-7e280f3b-millis",
+    "lbv-7e280f3b-exists",
+    "lbv-7e280f3b-nullvalue",
+    "lbv-7e280f3b-scores",
+    "lbv-7e280f3b-script",
+    "lbv-7e280f3b-stock",
+    "lbv-7e280f3b-filter",
+    "lbv-7e280f3b-should",
+    "lbv-7e280f3b-route-object",
+    "lbv-7e280f3b-route-nested",
+    "lbv-7e280f3b-dynamic",
+    "lbv-7e280f3b-flat",
+    "lbv-7e280f3b-scope",
+    "lbv-7e280f3b-pairs",
+    "lbv-7e280f3b-nestedcount",
+    "lbv-7e280f3b-nestedagg",
+    "lbv-7e280f3b-objectlimit",
+    "lbv-7e280f3b-norm",
+    "lbv-7e280f3b-textkeyword",
+    "lbv-7e280f3b-customja",
+    "lbv-7e280f3b-natural",
+    "lbv-7e280f3b-faq",
+    "lbv-7e280f3b-types",
+    "lbv-7e280f3b-geoformats",
+    "lbv-7e280f3b-geoqueries",
+    "lbv-7e280f3b-georank",
+    "lbv-7e280f3b-geoshapes",
+    "lbv-7e280f3b-bm25",
+    "lbv-7e280f3b-current",
+    "lbv-7e280f3b-legacy",
+    "lbv-7e280f3b-boost",
+    "lbv-7e280f3b-popularity",
+    "lbv-7e280f3b-bma",
+    "lbv-7e280f3b-bmb",
+    "lbv-7e280f3b-refresh",
+    "lbv-7e280f3b-alias-a",
+    "lbv-7e280f3b-alias-b"
+  ]
+}

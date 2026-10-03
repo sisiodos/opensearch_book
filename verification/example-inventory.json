@@ -1,0 +1,368 @@
+[
+  {
+    "chapter": 3,
+    "block": 1,
+    "line": 130,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 2,
+    "line": 146,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 3,
+    "line": 162,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 4,
+    "line": 179,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 5,
+    "line": 198,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 6,
+    "line": 214,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 7,
+    "line": 259,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 8,
+    "line": 271,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 9,
+    "line": 307,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 3,
+    "block": 10,
+    "line": 329,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 4,
+    "block": 1,
+    "line": 180,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 1,
+    "line": 45,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 2,
+    "line": 65,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 3,
+    "line": 97,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 4,
+    "line": 113,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 5,
+    "line": 141,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 6,
+    "line": 185,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 7,
+    "line": 199,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 8,
+    "line": 229,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 9,
+    "line": 243,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 10,
+    "line": 269,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 11,
+    "line": 284,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 12,
+    "line": 309,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 13,
+    "line": 323,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 14,
+    "line": 352,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 15,
+    "line": 376,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 16,
+    "line": 408,
+    "form": "JSON fragment (outer braces required)"
+  },
+  {
+    "chapter": 5,
+    "block": 17,
+    "line": 420,
+    "form": "JSON fragment (outer braces required)"
+  },
+  {
+    "chapter": 5,
+    "block": 18,
+    "line": 433,
+    "form": "JSON fragment (outer braces required)"
+  },
+  {
+    "chapter": 5,
+    "block": 19,
+    "line": 443,
+    "form": "JSON fragment (outer braces required)"
+  },
+  {
+    "chapter": 5,
+    "block": 20,
+    "line": 454,
+    "form": "JSON fragment (outer braces required)"
+  },
+  {
+    "chapter": 5,
+    "block": 21,
+    "line": 474,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 22,
+    "line": 492,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 23,
+    "line": 504,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 24,
+    "line": 526,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 25,
+    "line": 557,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 26,
+    "line": 594,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 27,
+    "line": 646,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 5,
+    "block": 28,
+    "line": 671,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 1,
+    "line": 17,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 2,
+    "line": 35,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 3,
+    "line": 55,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 4,
+    "line": 75,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 5,
+    "line": 112,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 6,
+    "line": 132,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 7,
+    "line": 159,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 8,
+    "line": 193,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 6,
+    "block": 9,
+    "line": 221,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 7,
+    "block": 1,
+    "line": 136,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 7,
+    "block": 2,
+    "line": 248,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 7,
+    "block": 3,
+    "line": 299,
+    "form": "JSON fragment (outer braces required)"
+  },
+  {
+    "chapter": 7,
+    "block": 4,
+    "line": 323,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 8,
+    "block": 1,
+    "line": 13,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 8,
+    "block": 2,
+    "line": 45,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 8,
+    "block": 3,
+    "line": 63,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 8,
+    "block": 4,
+    "line": 88,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 8,
+    "block": 5,
+    "line": 135,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 8,
+    "block": 6,
+    "line": 152,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 9,
+    "block": 1,
+    "line": 267,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 9,
+    "block": 2,
+    "line": 305,
+    "form": "complete JSON"
+  },
+  {
+    "chapter": 9,
+    "block": 3,
+    "line": 333,
+    "form": "JSON fragment (outer braces required)"
+  }
+]

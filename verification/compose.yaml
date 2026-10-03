@@ -1,0 +1,17 @@
+services:
+  opensearch:
+    build: .
+    image: lucene-book-verification:3.9.0
+    container_name: lucene-book-verification-20261003
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: 'true'
+      DISABLE_INSTALL_DEMO_CONFIG: 'true'
+      OPENSEARCH_JAVA_OPTS: '-Xms512m -Xmx512m'
+    ports:
+      - '127.0.0.1:19200:9200'
+    mem_limit: 2g
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
