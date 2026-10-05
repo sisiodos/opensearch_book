@@ -1,0 +1,362 @@
+[
+  {
+    "id": "ch01_01_replace_id",
+    "chapter": 1,
+    "section": "1.1",
+    "name": "same _id replaces one document"
+  },
+  {
+    "id": "ch01_02_basic_values",
+    "chapter": 1,
+    "section": "1.2–1.3",
+    "name": "filter then aggregation/sort and source retrieval"
+  },
+  {
+    "id": "ch02_03_term_match",
+    "chapter": 2,
+    "section": "2.1.1 / 2.1.4",
+    "name": "term is raw; match analyzes text"
+  },
+  {
+    "id": "ch02_04_bool_array",
+    "chapter": 2,
+    "section": "2.1.5",
+    "name": "boolean and keyword array containment"
+  },
+  {
+    "id": "ch02_05_ranges",
+    "chapter": 2,
+    "section": "2.2.1 / 2.2.5",
+    "name": "numeric and parsed date range"
+  },
+  {
+    "id": "ch02_06_date_nanos",
+    "chapter": 2,
+    "section": "2.2.5",
+    "name": "date_nanos retains fractional precision"
+  },
+  {
+    "id": "ch02_07_dv_only",
+    "chapter": 2,
+    "section": "2.3.4",
+    "name": "DocValues-only range, aggregate and sort"
+  },
+  {
+    "id": "ch02_08_skip_list",
+    "chapter": 2,
+    "section": "2.3.4",
+    "name": "skip_list mapping and range"
+  },
+  {
+    "id": "ch02_09_derived",
+    "chapter": 2,
+    "section": "2.3.3",
+    "name": "derived source reconstructs keyword array"
+  },
+  {
+    "id": "ch03_10_field_capabilities",
+    "chapter": 3,
+    "section": "3.2–3.3",
+    "name": "field capabilities by type"
+  },
+  {
+    "id": "ch03_11_caps",
+    "chapter": 3,
+    "section": "3.2",
+    "name": "assert default field capabilities for all table types"
+  },
+  {
+    "id": "ch03_12_geo_values",
+    "chapter": 3,
+    "section": "3.2 / 3.3",
+    "name": "geo_point sorting and aggregation"
+  },
+  {
+    "id": "ch03_13_text_dv",
+    "chapter": 3,
+    "section": "3.2 / 3.4",
+    "name": "text accepts but ignores doc_values true and false"
+  },
+  {
+    "id": "ch03_14_reject_search",
+    "chapter": 3,
+    "section": "3.4",
+    "name": "text aggregation fails without fielddata"
+  },
+  {
+    "id": "ch03_15_keyword_range",
+    "chapter": 3,
+    "section": "3.4",
+    "name": "keyword lexicographic range differs from numeric"
+  },
+  {
+    "id": "ch03_16_four_combinations",
+    "chapter": 3,
+    "section": "3.4–3.5",
+    "name": "index/doc_values four combinations"
+  },
+  {
+    "id": "ch03_17_disabled_object",
+    "chapter": 3,
+    "section": "3.3 / 3.5",
+    "name": "enabled false retains arbitrary object"
+  },
+  {
+    "id": "ch03_18_numeric_validation",
+    "chapter": 3,
+    "section": "3.5",
+    "name": "index false still validates numeric input"
+  },
+  {
+    "id": "ch03_19_source_facets",
+    "chapter": 3,
+    "section": "3.6",
+    "name": "source filtering and facets in one request"
+  },
+  {
+    "id": "ch04_20_collapse",
+    "chapter": 4,
+    "section": "4.2 / 4.3",
+    "name": "SKU collapse changes hits but not aggregation grain"
+  },
+  {
+    "id": "ch04_21_dual_read_models",
+    "chapter": 4,
+    "section": "4.3",
+    "name": "product and SKU indexes from same source"
+  },
+  {
+    "id": "ch04_22_history_grain",
+    "chapter": 4,
+    "section": "4.5",
+    "name": "history document count differs from people count"
+  },
+  {
+    "id": "ch05_23_chapter5_search",
+    "chapter": 5,
+    "section": "5.2–5.7",
+    "name": "book exact/prefix/match/phrase/range/terms/AND/sort examples"
+  },
+  {
+    "id": "ch05_24_rolling_dates",
+    "chapter": 5,
+    "section": "5.4",
+    "name": "rolling 30 days excludes future dates"
+  },
+  {
+    "id": "ch05_25_date_format",
+    "chapter": 5,
+    "section": "5.4",
+    "name": "query format accepts dd/MM/yyyy"
+  },
+  {
+    "id": "ch05_26_millis",
+    "chapter": 5,
+    "section": "5.4",
+    "name": "date format does not preserve nanosecond precision"
+  },
+  {
+    "id": "ch05_27_exists_matrix",
+    "chapter": 5,
+    "section": "5.8",
+    "name": "exists/null/empty/ignore_above behavior"
+  },
+  {
+    "id": "ch05_28_null_value",
+    "chapter": 5,
+    "section": "5.8",
+    "name": "null_value distinguishes explicit null from missing"
+  },
+  {
+    "id": "ch05_29_function_scores",
+    "chapter": 5,
+    "section": "5.9",
+    "name": "log1p multiply yields zero for zero/missing count"
+  },
+  {
+    "id": "ch05_30_script_scores",
+    "chapter": 5,
+    "section": "5.9",
+    "name": "script_score replaces lexical score"
+  },
+  {
+    "id": "ch05_31_stock",
+    "chapter": 5,
+    "section": "5.10",
+    "name": "exists inventory vs quantity > 0"
+  },
+  {
+    "id": "ch05_32_filter_score",
+    "chapter": 5,
+    "section": "5.10",
+    "name": "filter does not add score"
+  },
+  {
+    "id": "ch05_33_should_default",
+    "chapter": 5,
+    "section": "5.10",
+    "name": "should optional only with must/filter by default"
+  },
+  {
+    "id": "ch06_34_object_nested",
+    "chapter": 6,
+    "section": "6.1.1 / 6.2.2",
+    "name": "object false positive vs nested same-element match"
+  },
+  {
+    "id": "ch06_35_dynamic_keys",
+    "chapter": 6,
+    "section": "6.1.2",
+    "name": "dynamic keys grow mapping; repeated values do not"
+  },
+  {
+    "id": "ch06_36_flat_object",
+    "chapter": 6,
+    "section": "6.1.3",
+    "name": "flat_object keeps keys out of mapping and exact lookup"
+  },
+  {
+    "id": "ch06_37_nested_scopes",
+    "chapter": 6,
+    "section": "6.2.2",
+    "name": "separate nested queries can match different elements"
+  },
+  {
+    "id": "ch06_38_scalar_pairs",
+    "chapter": 6,
+    "section": "6.2.3",
+    "name": "application scalar pair key exact match"
+  },
+  {
+    "id": "ch06_39_nested_count",
+    "chapter": 6,
+    "section": "6.2.5",
+    "name": "100 nested objects produce 101 Lucene documents"
+  },
+  {
+    "id": "ch06_40_nestedagg",
+    "chapter": 6,
+    "section": "6.2.5",
+    "name": "nested aggregation counts child scope"
+  },
+  {
+    "id": "ch06_41_nested_limits",
+    "chapter": 6,
+    "section": "6.2.5",
+    "name": "depth/nested_fields/nested_objects limits reject excess"
+  },
+  {
+    "id": "ch07_42_analysis_basics",
+    "chapter": 7,
+    "section": "7.1–7.2",
+    "name": "standard analyzer vs tokenizer vs keyword"
+  },
+  {
+    "id": "ch07_43_keyword_normalizer",
+    "chapter": 7,
+    "section": "7.1.3",
+    "name": "keyword rejects analyzer; normalizer retains one term"
+  },
+  {
+    "id": "ch07_44_textkeyword",
+    "chapter": 7,
+    "section": "7.1.3",
+    "name": "text with keyword analyzer remains text without aggregation"
+  },
+  {
+    "id": "ch07_45_kuromoji",
+    "chapter": 7,
+    "section": "7.2",
+    "name": "kuromoji tokenizer on Japanese example"
+  },
+  {
+    "id": "ch07_46_custom_ja",
+    "chapter": 7,
+    "section": "7.3.3",
+    "name": "complete custom_ja book mapping and search synonyms"
+  },
+  {
+    "id": "ch07_47_natural_search",
+    "chapter": 7,
+    "section": "7.4.3",
+    "name": "natural_search definition and explicit Japanese stopwords"
+  },
+  {
+    "id": "ch07_48_faq_search",
+    "chapter": 7,
+    "section": "7.4.5",
+    "name": "faq_query multi-word synonym graph"
+  },
+  {
+    "id": "ch07_49_query_types",
+    "chapter": 7,
+    "section": "7.4.1",
+    "name": "term/match/phrase/prefix/wildcard/regexp differences"
+  },
+  {
+    "id": "ch08_50_geo_formats",
+    "chapter": 8,
+    "section": "8.2",
+    "name": "three coordinate formats give same search results"
+  },
+  {
+    "id": "ch08_51_geo_queries",
+    "chapter": 8,
+    "section": "8.3",
+    "name": "book distance, box and polygon queries on points"
+  },
+  {
+    "id": "ch08_52_geo_rank",
+    "chapter": 8,
+    "section": "8.4",
+    "name": "distance sort and gauss decay at scale"
+  },
+  {
+    "id": "ch08_53_geo_shapes",
+    "chapter": 8,
+    "section": "8.5",
+    "name": "point array and geo_shape line/polygon fields"
+  },
+  {
+    "id": "ch09_54_bm25_formula",
+    "chapter": 9,
+    "section": "9.2.2",
+    "name": "BM25 explain agrees with book formula"
+  },
+  {
+    "id": "ch09_55_legacy_bm25",
+    "chapter": 9,
+    "section": "9.2.2",
+    "name": "LegacyBM25 scaling versus current BM25"
+  },
+  {
+    "id": "ch09_56_title_boost",
+    "chapter": 9,
+    "section": "9.3.2",
+    "name": "title boost raises title match"
+  },
+  {
+    "id": "ch09_57_popularity",
+    "chapter": 9,
+    "section": "9.3.3",
+    "name": "sqrt(factor * popularity) multiply formula"
+  },
+  {
+    "id": "ch09_58_custom_bm25",
+    "chapter": 9,
+    "section": "9.3.4",
+    "name": "custom BM25 k1/b settings change score"
+  },
+  {
+    "id": "ch10_59_refresh_visibility",
+    "chapter": 10,
+    "section": "10.1 / 10.4",
+    "name": "refresh visibility and segment/flush APIs"
+  },
+  {
+    "id": "ch10_60_alias_switch",
+    "chapter": 10,
+    "section": "10.3",
+    "name": "replica setting and write alias switching"
+  }
+]

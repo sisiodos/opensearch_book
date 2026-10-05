@@ -1,11 +1,12 @@
-import run as r
+import common as r
+from cases.ch05_23_chapter5_search import run as chapter5_search
 import json
 from pathlib import Path
 root=Path(__file__).resolve().parent
 saved=json.loads((root/'results.json').read_text())
 r.PREFIX=saved['prefix']+'recheck-'
 r.exchanges=json.loads((root/'exchanges.json').read_text())
-r.case(5,'5.2–5.7','book exact/prefix/match/phrase/range/terms/AND/sort examples',r.chapter5_search)
+r.case(5,'5.2–5.7','book exact/prefix/match/phrase/range/terms/AND/sort examples',chapter5_search)
 new=r.results[0]
 assert new['status']=='PASS',new
 saved['results']=[new if x['name']==new['name'] else x for x in saved['results']]

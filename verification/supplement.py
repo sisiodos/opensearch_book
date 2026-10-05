@@ -1,4 +1,4 @@
-import run as r,json
+import common as r,json
 from pathlib import Path
 root=Path(__file__).resolve().parent
 saved=json.loads((root/'results.json').read_text());r.PREFIX=saved['prefix']+'extra-';r.exchanges=json.loads((root/'exchanges.json').read_text())

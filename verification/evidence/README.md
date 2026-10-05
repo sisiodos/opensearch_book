@@ -1,0 +1,64 @@
+# ケース別の過去の実機記録
+
+既存の results.json / exchanges.json を展開したものです。今回の再実行結果ではありません。
+
+- [ch01_01_replace_id](ch01_01_replace_id/review.md): same _id replaces one document
+- [ch01_02_basic_values](ch01_02_basic_values/review.md): filter then aggregation/sort and source retrieval
+- [ch02_03_term_match](ch02_03_term_match/review.md): term is raw; match analyzes text
+- [ch02_04_bool_array](ch02_04_bool_array/review.md): boolean and keyword array containment
+- [ch02_05_ranges](ch02_05_ranges/review.md): numeric and parsed date range
+- [ch02_06_date_nanos](ch02_06_date_nanos/review.md): date_nanos retains fractional precision
+- [ch02_07_dv_only](ch02_07_dv_only/review.md): DocValues-only range, aggregate and sort
+- [ch02_08_skip_list](ch02_08_skip_list/review.md): skip_list mapping and range
+- [ch02_09_derived](ch02_09_derived/review.md): derived source reconstructs keyword array
+- [ch03_10_field_capabilities](ch03_10_field_capabilities/review.md): field capabilities by type
+- [ch03_11_caps](ch03_11_caps/review.md): assert default field capabilities for all table types
+- [ch03_12_geo_values](ch03_12_geo_values/review.md): geo_point sorting and aggregation
+- [ch03_13_text_dv](ch03_13_text_dv/review.md): text accepts but ignores doc_values true and false
+- [ch03_14_reject_search](ch03_14_reject_search/review.md): text aggregation fails without fielddata
+- [ch03_15_keyword_range](ch03_15_keyword_range/review.md): keyword lexicographic range differs from numeric
+- [ch03_16_four_combinations](ch03_16_four_combinations/review.md): index/doc_values four combinations
+- [ch03_17_disabled_object](ch03_17_disabled_object/review.md): enabled false retains arbitrary object
+- [ch03_18_numeric_validation](ch03_18_numeric_validation/review.md): index false still validates numeric input
+- [ch03_19_source_facets](ch03_19_source_facets/review.md): source filtering and facets in one request
+- [ch04_20_collapse](ch04_20_collapse/review.md): SKU collapse changes hits but not aggregation grain
+- [ch04_21_dual_read_models](ch04_21_dual_read_models/review.md): product and SKU indexes from same source
+- [ch04_22_history_grain](ch04_22_history_grain/review.md): history document count differs from people count
+- [ch05_23_chapter5_search](ch05_23_chapter5_search/review.md): book exact/prefix/match/phrase/range/terms/AND/sort examples
+- [ch05_24_rolling_dates](ch05_24_rolling_dates/review.md): rolling 30 days excludes future dates
+- [ch05_25_date_format](ch05_25_date_format/review.md): query format accepts dd/MM/yyyy
+- [ch05_26_millis](ch05_26_millis/review.md): date format does not preserve nanosecond precision
+- [ch05_27_exists_matrix](ch05_27_exists_matrix/review.md): exists/null/empty/ignore_above behavior
+- [ch05_28_null_value](ch05_28_null_value/review.md): null_value distinguishes explicit null from missing
+- [ch05_29_function_scores](ch05_29_function_scores/review.md): log1p multiply yields zero for zero/missing count
+- [ch05_30_script_scores](ch05_30_script_scores/review.md): script_score replaces lexical score
+- [ch05_31_stock](ch05_31_stock/review.md): exists inventory vs quantity > 0
+- [ch05_32_filter_score](ch05_32_filter_score/review.md): filter does not add score
+- [ch05_33_should_default](ch05_33_should_default/review.md): should optional only with must/filter by default
+- [ch06_34_object_nested](ch06_34_object_nested/review.md): object false positive vs nested same-element match
+- [ch06_35_dynamic_keys](ch06_35_dynamic_keys/review.md): dynamic keys grow mapping; repeated values do not
+- [ch06_36_flat_object](ch06_36_flat_object/review.md): flat_object keeps keys out of mapping and exact lookup
+- [ch06_37_nested_scopes](ch06_37_nested_scopes/review.md): separate nested queries can match different elements
+- [ch06_38_scalar_pairs](ch06_38_scalar_pairs/review.md): application scalar pair key exact match
+- [ch06_39_nested_count](ch06_39_nested_count/review.md): 100 nested objects produce 101 Lucene documents
+- [ch06_40_nestedagg](ch06_40_nestedagg/review.md): nested aggregation counts child scope
+- [ch06_41_nested_limits](ch06_41_nested_limits/review.md): depth/nested_fields/nested_objects limits reject excess
+- [ch07_42_analysis_basics](ch07_42_analysis_basics/review.md): standard analyzer vs tokenizer vs keyword
+- [ch07_43_keyword_normalizer](ch07_43_keyword_normalizer/review.md): keyword rejects analyzer; normalizer retains one term
+- [ch07_44_textkeyword](ch07_44_textkeyword/review.md): text with keyword analyzer remains text without aggregation
+- [ch07_45_kuromoji](ch07_45_kuromoji/review.md): kuromoji tokenizer on Japanese example
+- [ch07_46_custom_ja](ch07_46_custom_ja/review.md): complete custom_ja book mapping and search synonyms
+- [ch07_47_natural_search](ch07_47_natural_search/review.md): natural_search definition and explicit Japanese stopwords
+- [ch07_48_faq_search](ch07_48_faq_search/review.md): faq_query multi-word synonym graph
+- [ch07_49_query_types](ch07_49_query_types/review.md): term/match/phrase/prefix/wildcard/regexp differences
+- [ch08_50_geo_formats](ch08_50_geo_formats/review.md): three coordinate formats give same search results
+- [ch08_51_geo_queries](ch08_51_geo_queries/review.md): book distance, box and polygon queries on points
+- [ch08_52_geo_rank](ch08_52_geo_rank/review.md): distance sort and gauss decay at scale
+- [ch08_53_geo_shapes](ch08_53_geo_shapes/review.md): point array and geo_shape line/polygon fields
+- [ch09_54_bm25_formula](ch09_54_bm25_formula/review.md): BM25 explain agrees with book formula
+- [ch09_55_legacy_bm25](ch09_55_legacy_bm25/review.md): LegacyBM25 scaling versus current BM25
+- [ch09_56_title_boost](ch09_56_title_boost/review.md): title boost raises title match
+- [ch09_57_popularity](ch09_57_popularity/review.md): sqrt(factor * popularity) multiply formula
+- [ch09_58_custom_bm25](ch09_58_custom_bm25/review.md): custom BM25 k1/b settings change score
+- [ch10_59_refresh_visibility](ch10_59_refresh_visibility/review.md): refresh visibility and segment/flush APIs
+- [ch10_60_alias_switch](ch10_60_alias_switch/review.md): replica setting and write alias switching

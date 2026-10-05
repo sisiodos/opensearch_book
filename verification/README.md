@@ -12,7 +12,22 @@ docker --context desktop-linux compose -f verification/compose.yaml up -d --buil
 python3 verification/run.py
 ```
 
-run.py は毎回別の lbv- 接頭辞のインデックスを作ります。本文が別の場所にある場合は BOOK_ROOT でディレクトリを指定できます。結果・リクエスト応答はスクリプトと同じ場所へ保存します。単一ノードの検証データを使い、性能測定にはしません。
+60ケースを `cases/` 内の1ケース1ファイルに分けています。各ファイルの `run()` を上から読むと、データの準備、HTTP操作、`assert` による期待結果の確認を追えます。共通のHTTP操作とデータ準備は `common.py` にあります。[ケース一覧](cases/README.md)から対象を選んでください。
+
+```sh
+# 一覧の確認（OpenSearchへの接続は不要です）
+python3 verification/run.py --list
+# 1ケースだけ実行
+python3 verification/run.py --case ch06_34_object_nested
+# 第6章を実行
+python3 verification/run.py --chapter 6
+```
+
+`--case` は繰り返し指定できます。各ケースは専用の `lbv-` 接頭辞のインデックスと必要なデータを作り、他ケースの実行結果に依存しません。本文が別の場所にある場合は `BOOK_ROOT` でディレクトリを指定できます。作成したインデックスは結果確認のため残ります。
+
+実行記録は `runs/lbv-<実行ID>/` に保存します。`review.md` はケースごとに、送信したHTTPメソッド・パス・JSONと実際の応答を並べます。ケースの `assert` と応答を照らし合わせて確認してください。`results.json` には判定、`exchanges.json` には通信記録、`environment.json` には接続先のバージョンを保存します。単一ノードの検証データを使い、性能測定にはしません。
+
+[過去の実機記録をケースごとに読む](evidence/README.md)こともできます。これは既存の `results.json` と `exchanges.json` を読みやすく展開した記録で、今回の再実行結果ではありません。
 
 Lucene の直接検証：
 
